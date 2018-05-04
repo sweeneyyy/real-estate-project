@@ -69,9 +69,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <Router>
-          <div>
+          <div className='container'>
             <Nav user={this.state.user} updateUser={this.getUser} />
             <div className="space">
               <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />

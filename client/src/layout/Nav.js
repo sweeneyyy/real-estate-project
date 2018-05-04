@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Logout from '../auth/Logout.js';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Nav extends Component {
   render(){
@@ -8,15 +8,21 @@ class Nav extends Component {
     if(this.props.user){
       links = (
         <span>
-          <Link to="/profile">Profile</Link>
+          <NavLink activeClassName='active' to="/profile">
+            Profile
+          </NavLink>
           <Logout updateUser={this.props.updateUser} />
         </span>);
     }
     else {
       links = (
         <span>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
+          <NavLink activeClassName='active' to="/login">
+            Login
+          </NavLink>
+          <NavLink activeClassName='active' to="/signup">
+            Sign Up
+          </NavLink>
         </span>);
     }
 

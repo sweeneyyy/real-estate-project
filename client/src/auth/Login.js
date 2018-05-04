@@ -40,22 +40,20 @@ class Login extends Component {
       return (<Redirect to="/profile" />);
     }
     else {
-      form = (<form onSubmit={this.handleSubmit}>
-                <div>
-                  <input name="Email"
-                       placeholder="Enter your email"
-                       value={this.state.email}
-                       onChange={this.handleEmailChange}
-                  />
-                </div>
-                <div>
-                  <input name="Password"
-                       placeholder="Enter your password"
-                       type="password"
-                       value={this.state.password}
-                       onChange={this.handlePasswordChange}
-                  />
-                </div>
+      form = (<form className='column' onSubmit={this.handleSubmit}>
+                <input name="Email"
+                      placeholder="Enter your email"
+                      value={this.state.email}
+                      autoComplete='off'
+                      onChange={this.handleEmailChange}
+                />
+                <input name="Password"
+                      placeholder="Enter your password"
+                      type="password"
+                      value={this.state.password}
+                      autoComplete='off'
+                      onChange={this.handlePasswordChange}
+                />
                 <input type="submit" value="Login" className="btn-primary" />
               </form>);
     }

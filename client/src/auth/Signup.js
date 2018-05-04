@@ -43,27 +43,26 @@ class Signup extends Component {
       return (<Redirect to="/profile" />);
     }
     else {
-      form = (<form onSubmit={this.handleSubmit}>
-                <div>
-                  <input name="Name"
-                       placeholder="What is your first name?"
-                       value={this.state.name}
-                       onChange={this.handleNameChange}
-                  />
-                </div>
-                <div>
-                  <input name="Email"
-                       placeholder="What is your email?"
-                       value={this.state.email}
-                       onChange={this.handleEmailChange} />
-               </div>
-               <div>
-                  <input name="Password"
-                     placeholder="Choose a password"
-                     type="password"
-                     value={this.state.password}
-                     onChange={this.handlePasswordChange} />
-                 </div>
+      form = (<form className='column' onSubmit={this.handleSubmit}>
+                <input name="Name"
+                      placeholder="First name"
+                      value={this.state.name}
+                      autoComplete='off'
+                      onChange={this.handleNameChange}
+                />
+                <input name="Email"
+                      placeholder="Email address"
+                      value={this.state.email}
+                      autoComplete='off'
+                      onChange={this.handleEmailChange} 
+                />
+                <input name="Password"
+                    placeholder="Password"
+                    type="password"
+                    value={this.state.password}
+                    autoComplete='off'
+                    onChange={this.handlePasswordChange} 
+                />
                  <input type="submit" value="Sign up!" className="btn-primary" />
               </form>);
     }
