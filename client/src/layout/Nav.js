@@ -2,39 +2,46 @@ import React, { Component } from 'react';
 import Logout from '../auth/Logout.js';
 import { NavLink } from 'react-router-dom';
 
-class Nav extends Component {
-  render(){
-    let links = <span />;
-    if(this.props.user){
-      links = (
-        <span>
-          <NavLink activeClassName='active' to="/profile">
-            Profile
-          </NavLink>
-          <Logout updateUser={this.props.updateUser} />
-        </span>);
-    }
-    else {
-      links = (
-        <span>
-          <NavLink activeClassName='active' to="/login">
-            Login
-          </NavLink>
-          <NavLink activeClassName='active' to="/signup">
-            Sign Up
-          </NavLink>
-        </span>);
-    }
-
-    return(
-        <div>
-          <nav className="nav">
-            <a href="/">Home</a>
-            {links}
-          </nav>
-        </div>
-      );
-  }
+function Nav () {
+  return (
+    <ul className='nav'>
+      <li>
+        <NavLink exact activeClassName='active' to='/'>
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName='active' to='/buy'>
+          Buy
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName='active' to='/sell'>
+          Sell
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName='active' to='/rent'>
+          Rent
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName='active' to='/search'>
+          Property Search
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName='active' to='/neighborhoods'>
+          N'Hoods
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName='active' to='/about'>
+          About Us
+        </NavLink>
+      </li>
+    </ul>
+  )
 }
 
 export default Nav;

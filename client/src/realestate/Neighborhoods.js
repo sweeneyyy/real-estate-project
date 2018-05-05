@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Home extends Component {
+class Neighborhoods extends Component {
   render(){
     return (
       <div className='page-container'>
-        <p>HOME</p>
+        <p>N'HOODS</p>
       </div>
       );
   }
 }
 
-export default Home;
+export default Neighborhoods;
