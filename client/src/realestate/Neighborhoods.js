@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 class Neighborhoods extends Component {
-  render(){
+  render() {
     return (
       <div className='page-container'>
-        <p>N'HOODS</p>
+        <p>NEIGHBHORHOODS</p>
       </div>
-      );
+    );
   }
 }
 
