@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Logout from '../auth/Logout.js';
 import { NavLink } from 'react-router-dom';
 
-function Nav () {
+function Nav() {
   return (
     <ul className='nav'>
       <li>
@@ -32,7 +32,7 @@ function Nav () {
       </li>
       <li>
         <NavLink activeClassName='active' to='/neighborhoods'>
-          N'Hoods
+          Neighborhoods
         </NavLink>
       </li>
       <li>

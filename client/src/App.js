@@ -17,16 +17,16 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <div className='container'>
+          <div>
             <Nav />
-            <div className="space">
-              <Route exact path="/" component={Home} />
-              <Route path="/buy" component={Buy} />
-              <Route path="/sell" component={Sell} />
-              <Route path="/rent" component={Rent} />
-              <Route path="/search" component={Search} />
-              <Route path="/neighborhoods" component={Neighborhoods} />
-              <Route path="/about" component={About} />
+            <div className='container'>
+              <Route exact path='/' component={Home} />
+              <Route path='/buy' component={Buy} />
+              <Route path='/sell' component={Sell} />
+              <Route path='/rent' component={Rent} />
+              <Route path='/search' component={Search} />
+              <Route path='/neighborhoods' component={Neighborhoods} />
+              <Route path='/about' component={About} />
             </div>
           </div>
         </Router>
