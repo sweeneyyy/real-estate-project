@@ -2,9 +2,6 @@ ul {
   padding: 0;
 }
 
-li {
-  list-style-type: none;
-}
 .nav {
   display: flex;
   margin: auto;
@@ -23,6 +20,7 @@ li {
 
 .nav li {
   margin-top: 20px;
+  list-style-type: none;
 }
 
 .active {
@@ -37,14 +35,32 @@ li {
 .page-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.header {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #B40101;
+}
+
+.sub-header {
+  font-size: 25px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.row {
+  display: flex;
 }
 
 .column {
   display: flex;
   flex-direction: column;
   width: 500px;
-  align-items: center;
 }
 
 .column input {
@@ -80,6 +96,16 @@ li {
 }
 
 /* NEIGHBORHOODS */
+.neighborhood-sections {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #666666;
+}
+
+.neighborhood-sections li {
+  margin-left: 25px;
+}
 
 /* FLASH MESSAGES */
 .error {
@@ -118,7 +144,7 @@ li {
 
 /* FOOTER */
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 20px;
