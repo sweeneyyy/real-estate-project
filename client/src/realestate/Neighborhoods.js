@@ -16,7 +16,7 @@ function NeighborhoodSection(props) {
 class Neighborhoods extends Component {
   render() {
     return (
-      <div className='page-container'>
+      <div className='container'>
         <p className='header'>Neighborhoods</p>
         <div className='row'>
           <NeighborhoodSection
@@ -35,8 +35,9 @@ class Neighborhoods extends Component {
         <div className='row'> 
           <NeighborhoodSection
             areaName='Highland Beach'
-            subAreaOne='Intracoastal'
-            subAreaTwo='Beachfront'
+            subAreaOne='Intracoastal Condos'
+            subAreaTwo='Beachfront Condos'
+            subAreaThree='Single Family Homes'
           />
           <NeighborhoodSection
             areaName='New Construction'
