@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Sell extends Component {
   render(){
     return (
-      <div className='container'>
-        <p className='header'>SELL</p>
+      <div>
+        <h1>SELL</h1>
       </div>
       );
   }

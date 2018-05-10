@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Search extends Component {
   render(){
     return (
-      <div className='container'>
-        <p className='header'>SEARCH</p>
+      <div>
+        <h1>SEARCH</h1>
       </div>
       );
   }

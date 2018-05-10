@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 function NeighborhoodSection(props) {
   return (
     <div className='column'>
-      <p className='sub-header'>{props.areaName}</p>
+      <h2>{props.areaName}</h2>
       <ul className='neighborhood-sections'>
         <li>{props.subAreaOne}</li>
         <li>{props.subAreaTwo}</li>
@@ -13,11 +14,17 @@ function NeighborhoodSection(props) {
   );
 }
 
+NeighborhoodSection.propTypes = {
+  subAreaOne: PropTypes.string.isRequired,
+  subAreaTwo: PropTypes.string.isRequired,
+  subAreaThree: PropTypes.string.isRequired
+}
+
 class Neighborhoods extends Component {
   render() {
     return (
-      <div className='container'>
-        <p className='header'>Neighborhoods</p>
+      <div>
+        <h1>Neighborhoods</h1>
         <div className='row'>
           <NeighborhoodSection
             areaName='Downtown + East Boca Raton'
