@@ -102,6 +102,12 @@ ul {
 .active {
   font-weight: bold;
 }
+/* Buy */
+
+img {
+  width: 100%;
+  margin: 40px 0;
+}
 
 /* Neighborhoods */
 
@@ -160,5 +166,6 @@ ul {
 .footer-text {
   font-size: .75em;
   display: block;
+  text-align: right;
   padding: 10px;
 }
