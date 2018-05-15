@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-// import faMobile from '@fortawesome/fontawesome-free-solid/faMobile';
 
 function BuyIntroduction(props) {
   return (
