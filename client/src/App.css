@@ -143,6 +143,21 @@ strong {
 
 .divider {
   text-align: center;
+  margin: 70px 0;
+}
+
+.buy-CTA {
+  /* border: 1px solid red; */
+  width: 30%;
+  background: var(--red-color);
+  color: #fff;
+  box-shadow: 0 5px 0 var(--light-gray-color);
+  padding: 20px;
+}
+
+.buy-CTA h1, .buy-CTA p {
+  font-weight: 100;
+  line-height: 30px;
 }
 
 /* Neighborhoods */

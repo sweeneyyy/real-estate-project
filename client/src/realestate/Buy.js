@@ -1,12 +1,38 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-function BuyIntroduction(props) {
+class BuyerInput extends Component {
+  render() {
+    return (
+      <form action="https://formspree.io/sweeneyarnett@gmail.com"
+      method="POST">
+        <input type='text' name='name' placeholder='Name'/>
+        <input type='email' name='_replyto' placeholder='email'/>
+        <input type='submit' value='send' />
+      </form>
+    )
+  }
+}
+
+function BuySectionCTA(props) {
   return (
-    <div>
-      <p className='buy-intro'>We love helping buyers <strong>find their dream home</strong>. That's why we work with each client individually, taking the time to understand their unique lifestyles, needs and wishes. This is about more than a certain number of bedrooms or a particular ZIP code. It's about your life, and it's important to us.</p>
-      <img src="https://picsum.photos/g/1300/300/?random" className="image-buy"/>
+    <div className='buy-CTA'>
+      <h1>Ready to Start Your Home Search?</h1>
+      <p>Our experienced and knowledgeable team is ready to help. The first step is to complete your buyer profile!</p>
     </div>
   )
+}
+
+function BuySectionDivider(props) {
+  return (
+    <div className='divider'>
+      <h2>{props.message}</h2>
+    </div>
+  )
+}
+
+BuySectionDivider.PropTypes = {
+  message: PropTypes.string.isRequired
 }
 
 function BuySection(props) {
@@ -20,10 +46,17 @@ function BuySection(props) {
   )
 }
 
-function BuySectionDivider(props) {
+BuySection.PropTypes = {
+  icon: PropTypes.string.isRequired,
+  buySectionHeader: PropTypes.string.isRequired,
+  buySectionText: PropTypes.string.isRequired
+}
+
+function BuyIntroduction(props) {
   return (
-    <div className='divider'>
-      <h2>{props.message}</h2>
+    <div>
+      <p className='buy-intro'>We love helping buyers <strong>find their dream home</strong>. That's why we work with each client individually, taking the time to understand their unique lifestyles, needs and wishes. This is about more than a certain number of bedrooms or a particular ZIP code. It's about your life, and it's important to us.</p>
+      <img src="https://picsum.photos/g/1300/300/?random" className="image-buy"/>
     </div>
   )
 }
@@ -69,6 +102,10 @@ class Buy extends Component {
         <BuySectionDivider 
             message={'It\'s Free to Have Us As Your Buyer\'s Agent!'} 
           />
+          <div className='buy-container'>
+            <BuySectionCTA />
+            <BuyerInput />
+          </div>
       </div>
       );
   }
