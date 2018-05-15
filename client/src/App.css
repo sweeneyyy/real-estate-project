@@ -104,9 +104,33 @@ ul {
 }
 /* Buy */
 
-img {
+.image-buy {
   width: 100%;
   margin: 40px 0;
+  padding: 0;
+}
+
+.buy-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buy-sections {
+  width: 30%;
+  margin: 15px;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+.buy-sections p {
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 30px;
+  /* width: 70%; */
+}
+
+.buy-sections i {
+  margin-right: 10px;
 }
 
 /* Neighborhoods */
