@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-class BuyerInput extends Component {
-  render() {
-    return (
-      <form action="https://formspree.io/sweeneyarnett@gmail.com"
-      method="POST">
-        <input type='text' name='name' placeholder='Name'/>
-        <input type='email' name='_replyto' placeholder='email'/>
-        <input type='submit' value='send' />
-      </form>
-    )
-  }
-}
+import BuyerForm from './BuyerForm.js';
 
 function BuySectionCTA(props) {
   return (
@@ -104,7 +92,7 @@ class Buy extends Component {
           />
           <div className='buy-container'>
             <BuySectionCTA />
-            <BuyerInput />
+            <BuyerForm />
           </div>
       </div>
       );

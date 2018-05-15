@@ -153,11 +153,64 @@ strong {
   color: #fff;
   box-shadow: 0 5px 0 var(--light-gray-color);
   padding: 20px;
+  max-height: max-content;
 }
 
 .buy-CTA h1, .buy-CTA p {
   font-weight: 100;
   line-height: 30px;
+}
+
+.buyer-profile {
+  font-weight: 100;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+/* Form */
+
+/* .buyer-form { */
+  /* margin-left: 30px; */
+  /* display: flex; */
+/* } */
+
+.flex-form {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.flex-form label {
+  flex: 1;
+  display: flex;
+  margin: 10px;
+  width: 80%;
+}
+
+.flex-form label p {
+  flex: 1;
+  display: block;
+}
+
+.flex-form label input, 
+.flex-form label select {
+  flex: 2;
+  padding: 5px 10px;
+  font-size: 1em;
+  color: var(--font-color);
+  font-family: var(--body-font);
+  font-weight: 400;
+}
+
+.flex-form input[type='submit'] {
+  margin: 20px 0;
+  background: var(--font-color);
+  padding: 10px 20px;
+  border: 0;
+  font-size: 1em;
+  color: #fff;
+  font-family: var(--body-font);
+  width: 100px;
 }
 
 /* Neighborhoods */
