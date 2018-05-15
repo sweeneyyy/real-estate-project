@@ -76,6 +76,10 @@ ul {
   padding: 0;
 }
 
+strong {
+  color: var(--red-color);
+}
+
 /* Nav */
 
 .nav {
@@ -115,11 +119,14 @@ ul {
   flex-wrap: wrap;
 }
 
+.buy-intro {
+  line-height: 30px;
+}
+
 .buy-sections {
   width: 30%;
-  margin: 15px;
+  margin: 16px;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 .buy-sections p {
@@ -131,6 +138,11 @@ ul {
 
 .buy-sections i {
   margin-right: 10px;
+  color: var(--red-color);
+}
+
+.divider {
+  text-align: center;
 }
 
 /* Neighborhoods */

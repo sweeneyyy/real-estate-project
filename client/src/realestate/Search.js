@@ -5,6 +5,7 @@ class Search extends Component {
     return (
       <div>
         <h1>SEARCH</h1>
+          <p>Coming Soon!</p>
       </div>
       );
   }

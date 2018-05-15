@@ -5,6 +5,7 @@ class About extends Component {
     return (
       <div>
         <h1>ABOUT</h1>
+          <p>Coming Soon!</p>
       </div>
       );
   }
