@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BuyerForm from './BuyerForm.js';
 
-function BuySectionCTA(props) {
-  return (
-    <div className='buy-CTA'>
-      <h1>Ready to Start Your Home Search?</h1>
-      <p>Our experienced and knowledgeable team is ready to help. The first step is to complete your buyer profile!</p>
-    </div>
-  )
-}
+// function BuySectionCTA(props) {
+//   return (
+//     <div className='buy-CTA'>
+//       <h1>Ready to Start Your Home Search?</h1>
+//       <p>Our experienced and knowledgeable team is ready to help. The first step is to complete your buyer profile!</p>
+//     </div>
+//   )
+// }
 
 function BuySectionDivider(props) {
   return (
@@ -91,7 +91,7 @@ class Buy extends Component {
             message={'It\'s Free to Have Us As Your Buyer\'s Agent!'} 
           />
           <div className='buy-container'>
-            <BuySectionCTA />
+            {/* <BuySectionCTA /> */}
             <BuyerForm />
           </div>
       </div>
