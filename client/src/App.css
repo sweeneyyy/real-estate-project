@@ -39,16 +39,6 @@ h1, h2 {
   text-transform: uppercase;
 }
 
-.row {
-  display: flex;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-} 
-
 .btn-primary {
   color: #e6e6e6;
   background: #0a0a0a;
@@ -133,7 +123,6 @@ strong {
   font-size: 1em;
   font-weight: 100;
   line-height: 30px;
-  /* width: 70%; */
 }
 
 .buy-sections i {
@@ -147,7 +136,6 @@ strong {
 }
 
 .buy-CTA {
-  /* border: 1px solid red; */
   width: 30%;
   background: var(--red-color);
   color: #fff;
@@ -172,15 +160,9 @@ strong {
   margin-left: 60px; 
 }
 
-/* .buyer-form textarea {
-  display: block;
-} */
-
 .flex-form {
   display: flex;
   margin-top: 40px;
-  /* flex-direction: column; */
-  /* align-items: center; */
 }
 
 .flex-form label {
@@ -230,17 +212,25 @@ strong {
 /* Neighborhoods */
 
 .neighborhood-sections {
-  /* display: flex; */
   font-size: 1em;
   font-weight: 100;
   line-height: 30px;
   width: 40%;
-  /* box-sizing: border-box; */
 }
 
 .neighborhood-sections li {
   margin-left: 25px;
 }
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+} 
 
 /* Flash Messages */
 
