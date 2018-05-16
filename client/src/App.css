@@ -72,19 +72,39 @@ strong {
 
 /* Nav */
 
-.nav {
+.nav, .toolbar {
   display: flex;
   margin: auto;
-  margin-bottom: 30px;
-  background: #000;
   text-align: left;
-  font-size: .9em;
-  position: sticky;
-  padding: 20px;
   list-style-type: none;
 }
 
-.nav a {
+.nav {
+  margin-bottom: 30px;
+  background: #000;
+  position: sticky;
+  padding: 30px;
+  font-size: 1.1em;
+}
+
+.toolbar {
+  background: var(--red-color);
+  position: relative;
+  padding: 8px;
+  font-size: .8em;
+  margin: 0;
+}
+
+.toolbar i, .toolbar-social i {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.toolbar-social {
+  text-align: right;
+}
+
+.nav a, .toolbar a {
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 15px;
@@ -152,6 +172,7 @@ strong {
 .buyer-profile {
   font-weight: 100;
   margin-top: 0;
+  margin-bottom:40px;
 }
 
 /* Form */

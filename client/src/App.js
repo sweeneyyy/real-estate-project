@@ -5,6 +5,7 @@ import axios from 'axios';
 import Footer from './layout/Footer.js';
 import Home from './Home.js';
 import Nav from './layout/Nav.js';
+import Toolbar from './layout/Toolbar.js';
 import Buy from './realestate/Buy.js';
 import Sell from './realestate/Sell.js';
 import Rent from './realestate/Rent.js';
@@ -18,6 +19,7 @@ class App extends Component {
       <div>
         <Router>
           <div>
+            <Toolbar />
             <Nav />
             <div className='container'>
               <Route exact path='/' component={Home} />
