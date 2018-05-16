@@ -75,7 +75,6 @@ strong {
 .nav, .toolbar {
   display: flex;
   margin: auto;
-  text-align: left;
   list-style-type: none;
 }
 
@@ -85,6 +84,7 @@ strong {
   position: sticky;
   padding: 30px;
   font-size: 1.1em;
+  text-align: left;
 }
 
 .toolbar {
@@ -95,7 +95,7 @@ strong {
   margin: 0;
 }
 
-.toolbar i, .toolbar-social i {
+.toolbar li i {
   color: #fff;
   margin-right: 10px;
 }
@@ -184,6 +184,7 @@ strong {
 .flex-form {
   display: flex;
   margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 .flex-form label {
