@@ -124,12 +124,12 @@ strong {
   padding: 0;
 }
 
-.buy-container {
+.buyOrSell-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.buy-intro {
+.buyOrSell-intro {
   line-height: 30px;
 }
 
