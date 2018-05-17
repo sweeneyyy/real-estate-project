@@ -1,7 +1,5 @@
 {
   "buy": {
-    "heading": "Buy with Sharon & Caron",
-    "description": "We love helping buyers find their dream home. That's why we work with each client individually, taking the time to understand their unique lifestyles, needs and wishes. This is about more than a certain number of bedrooms or a particular ZIP code. It's about your life, and it's important to us.",
     "sections": {
       "sectionOneHeading": "We're Tech Savvy",
       "sectionOneText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
@@ -14,6 +12,22 @@
       "sectionFiveHeading": "We Have Been There Before",
       "sectionFiveText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       "sectionSixHeading": "We Negotiate The Best Deal For You",
+      "sectionSixText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+    }
+  },
+  "sell": {
+    "sections": {
+      "sectionOneHeading": "Strategic Marketing",
+      "sectionOneText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "sectionTwoHeading": "Professional Home Staging & Photography",
+      "sectionTwoText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "sectionThreeHeading": "Skilled Negotiators",
+      "sectionThreeText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "sectionFourHeading": "Weekly Updates",
+      "sectionFourText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "sectionFiveHeading": "Sophisticated Financial Analysis",
+      "sectionFiveText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "sectionSixHeading": "Local Knowledge & International Reach",
       "sectionSixText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at turpis condimentum, cursus est quis, finibus turpis. Sed ac lacinia elit, eu molestie orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
     }
   }
