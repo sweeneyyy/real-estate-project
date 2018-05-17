@@ -8,7 +8,7 @@ function BuySectionDivider(props) {
     <div className='divider'>
       <h2>{props.message}</h2>
     </div>
-  )
+  );
 }
 
 BuySectionDivider.PropTypes = {
@@ -18,12 +18,13 @@ BuySectionDivider.PropTypes = {
 function BuySection(props) {
   return (
     <div className='buy-sections'>
-      <h3><i className={props.icon}></i>
+      <h3>
+        <i className={props.icon}></i>
         {props.heading}
       </h3>
         <p>{props.text}</p>
     </div>
-  )
+  );
 }
 
 BuySection.PropTypes = {
@@ -38,7 +39,7 @@ function BuyIntroduction(props) {
       <p className='buy-intro'>We love helping buyers <strong>find their dream home</strong>. That's why we work with each client individually, taking the time to understand their unique lifestyles, needs and wishes. This is about more than a certain number of bedrooms or a particular ZIP code. It's about your life, and it's important to us.</p>
       <img src="https://picsum.photos/g/1300/300/?random" className="image-buy"/>
     </div>
-  )
+  );
 }
 
 class Buy extends Component {

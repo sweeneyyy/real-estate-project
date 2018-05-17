@@ -7,7 +7,7 @@ class Search extends Component {
         <h1>SEARCH</h1>
           <p>Coming Soon!</p>
       </div>
-      );
+    );
   }
 }
 

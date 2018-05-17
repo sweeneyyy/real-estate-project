@@ -20,7 +20,7 @@ function Toolbar() {
           <a href='https://twitter.com/sharonarn'></a>
       </li>
     </ul>
-  )
+  );
 }
 
 export default Toolbar;

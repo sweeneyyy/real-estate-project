@@ -7,7 +7,7 @@ class About extends Component {
         <h1>ABOUT</h1>
           <p>Coming Soon!</p>
       </div>
-      );
+    );
   }
 }
 

@@ -7,7 +7,7 @@ class Rent extends Component {
         <h1>RENT</h1>
           <p>Coming Soon!</p>
       </div>
-      );
+    );
   }
 }
 
