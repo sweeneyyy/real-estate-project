@@ -6,12 +6,12 @@ import Footer from './layout/Footer.js';
 import Home from './Home.js';
 import Nav from './layout/Nav.js';
 import Toolbar from './layout/Toolbar.js';
-import Buy from './realestate/Buy.js';
-import Sell from './realestate/Sell.js';
-import Rent from './realestate/Rent.js';
-import Search from './realestate/Search.js';
-import Neighborhoods from './realestate/Neighborhoods.js';
-import About from './realestate/About.js';
+import Buy from './components/Buy.js';
+import Sell from './components/Sell.js';
+import Rent from './components/Rent.js';
+import Search from './components/Search.js';
+import Neighborhoods from './components/Neighborhoods.js';
+import About from './components/About.js';
 
 class App extends Component {
   render() {
