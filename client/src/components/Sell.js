@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import BuyOrSellSections from './BuyOrSellSections';
+import BuyOrSellSections from './BuyOrSellSections.js';
+import SellerForm from './SellerForm.js';
 import copyData from '../buyOrSell.json';
 
 function SellIntroduction(props) {
@@ -50,6 +51,10 @@ class Sell extends Component {
             heading={sellCopy.sectionSixHeading}
             text={sellCopy.sectionSixText}
           />
+        </div>
+        <img src="https://picsum.photos/g/1300/300/?random" className="image-buy"/>
+        <div className='buyOrSell-container'>
+          <SellerForm />
         </div>
       </div>
     );

@@ -155,7 +155,7 @@ strong {
   margin: 70px 0;
 }
 
-.buy-CTA {
+.buy-CTA, .sell-CTA {
   width: 30%;
   background: var(--red-color);
   color: #fff;
@@ -164,12 +164,13 @@ strong {
   max-height: max-content;
 }
 
-.buy-CTA h1, .buy-CTA p {
+.buy-CTA h1, .buy-CTA p,
+.sell-CTA h1, .sell-CTA p {
   font-weight: 100;
   line-height: 30px;
 }
 
-.buyer-profile {
+.buyer-profile, .seller-profile {
   font-weight: 100;
   margin-top: 0;
   margin-bottom:40px;
@@ -177,7 +178,7 @@ strong {
 
 /* Form */
 
-.buyer-form {
+.buyer-form, .seller-form {
   margin-left: 60px; 
 }
 

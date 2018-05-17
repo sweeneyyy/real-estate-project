@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BuyerForm from './BuyerForm.js';
-import BuyOrSellSections from './BuyOrSellSections';
+import BuyOrSellSections from './BuyOrSellSections.js';
 import copyData from '../buyOrSell.json';
 
 function BuySectionDivider(props) {
