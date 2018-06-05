@@ -19,24 +19,20 @@ class Search extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
-    this.props.onSubmit(
-      this.props.id,
-      this.state.query
-    )
+    // console.log('data', data);
+    // this.props.onSubmit(
+    //   this.props.id,
+    //   this.state.query
+    // )
+    axios.post('/listings/search', {
+      query: this.state.query,
+    }).then((res) => {
+      console.log('promise reached');
+      // this.setState({listings: res.data.results});
+    }).catch((err) => {
+      console.log("error:", err);
+    });
   }
-
-  // preventing = (e) => {
-  //   e.preventDefault();
-  //   axios.post('/search', {
-  //     city: this.state.query,
-  //   }).then((res) => {
-  //     console.log('promise reached');
-  //     this.setState({listings: res.data.listings});
-  //   }).catch((err) => {
-  //     console.log("error:", err);
-  //   });
-  // }
 
   render(){
     const { query } = this.state
