@@ -10,7 +10,6 @@ class Search extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-
   }
 
   handleChange = (event) => {
@@ -19,16 +18,12 @@ class Search extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // console.log('data', data);
-    // this.props.onSubmit(
-    //   this.props.id,
-    //   this.state.query
-    // )
+
     axios.post('/listings/search', {
       query: this.state.query,
     }).then((res) => {
       console.log('promise reached');
-      // this.setState({listings: res.data.results});
+      this.setState({listings: res.data.results});
     }).catch((err) => {
       console.log("error:", err);
     });
