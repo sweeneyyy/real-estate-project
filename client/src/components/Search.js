@@ -19,11 +19,11 @@ class Search extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    axios.post('/listings/search', {
+    axios.get('/search', {
       query: this.state.query,
     }).then((res) => {
       console.log('promise reached');
-      this.setState({listings: res.data.results});
+      this.setState({listings: res.D.Results});
     }).catch((err) => {
       console.log("error:", err);
     });

@@ -9,7 +9,7 @@ const secret = process.env.API_SECRET;
 const sessionSig = helpers.md5Hash(`${secret}ApiKey${key}`);
 const params = `?ApiKey=${key}&ApiSig=${sessionSig}`;
 
-
+// create new session for api auth
 router.post(`/sparkSession`, function(req, res) {
   return rp({
     uri: `https://sparkapi.com/v1/session${params}`,
@@ -19,17 +19,11 @@ router.post(`/sparkSession`, function(req, res) {
       'X-SparkApi-User-Agent': 'sharon_caron'
     },
     json: true
-  })
-  .then((response) => {
+  }).then((response) => {
     res.send({ token: response.D.Results[0].AuthToken});
-  })
-  .catch(err => res.status(400).send(err))
+  }).catch(err => res.status(400).send(err))
 });
 
-router.post('/search', function(req, res, callback) {
-  // console.log('post route on backend')
-  res.send('empty post to establish session');
-});
 
 router.get('/search', function(req, res){
   rp({
@@ -38,15 +32,12 @@ router.get('/search', function(req, res){
     headers: {
       'X-SparkApi-User-Agent': 'sharon_caron'
     }
-  })
-  .then((response) => {
+  }).then((response) => {
     // console.log(res);
     // var dataObj = JSON.parse(body);
     // res.send(dataObj);
     res.send(JSON.parse(response))
-  })
-  .catch(err => console.log(err));
-
+  }).catch(err => console.log(err));
 });
 
 
