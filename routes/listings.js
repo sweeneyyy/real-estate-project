@@ -1,6 +1,6 @@
 const express = require('express');
 const rp = require('request-promise');
-const helpers = require('./helpers/createSession.js');
+const helpers = require('./helpers/sparkSession.js');
 const router = express.Router();
 
 // api auth
@@ -21,6 +21,7 @@ router.post(`/sparkSession`, function(req, res) {
     json: true
   }).then((response) => {
     res.send({ token: response.D.Results[0].AuthToken});
+    console.log(token)
   }).catch(err => res.status(400).send(err))
 });
 
@@ -33,10 +34,10 @@ router.get('/search', function(req, res){
       'X-SparkApi-User-Agent': 'sharon_caron'
     }
   }).then((response) => {
-    // console.log(res);
-    // var dataObj = JSON.parse(body);
-    // res.send(dataObj);
-    res.send(JSON.parse(response))
+      // console.log(res);
+      // var dataObj = JSON.parse(body);
+      // res.send(dataObj);
+      res.send(JSON.parse(response))
   }).catch(err => console.log(err));
 });
 

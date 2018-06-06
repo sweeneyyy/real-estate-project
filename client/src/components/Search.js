@@ -20,10 +20,11 @@ class Search extends Component {
     event.preventDefault();
 
     axios.get('/search', {
-      query: this.state.query,
+      // query: this.state.query,
     }).then((res) => {
       console.log('promise reached');
       this.setState({listings: res.D.Results});
+      console.log('listings', res)
     }).catch((err) => {
       console.log("error:", err);
     });
