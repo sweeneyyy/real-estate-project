@@ -14,6 +14,12 @@ import Neighborhoods from './components/Neighborhoods.js';
 import About from './components/About.js';
 
 class App extends Component {
+
+  componentDidMount() {
+    axios.post('/listings/sparkSession', {})
+    .then(({ data }) => console.log(data))
+  }
+  
   render() {
     return (
       <div>
