@@ -20,10 +20,10 @@ router.post(`/`, function(req, res) {
   }).catch(err => res.status(400).send(err))
 });
 
-
+// GET request for featured listings from Sharon & Caron - Active status
 router.get('/search', function(req, res){
   rp({
-    uri: `https://sparkapi.com/v1/my/listings`,
+    uri: `https://sparkapi.com/v1/my/listings?_filter=StandardStatus Eq 'Active'`,
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
