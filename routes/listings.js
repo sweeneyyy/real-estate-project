@@ -1,43 +1,37 @@
 const express = require('express');
 const rp = require('request-promise');
-const helpers = require('./helpers/sparkSession.js');
 const router = express.Router();
-
-// api auth
-const key = process.env.API_KEY;
-const secret = process.env.API_SECRET;
-const sessionSig = helpers.md5Hash(`${secret}ApiKey${key}`);
-const params = `?ApiKey=${key}&ApiSig=${sessionSig}`;
+// api access token for auth
+const token = process.env.ACCESS_TOKEN;
 
 // create new session for api auth
-router.post(`/sparkSession`, function(req, res) {
+router.post(`/`, function(req, res) {
   return rp({
-    uri: `https://sparkapi.com/v1/session${params}`,
+    uri: `https://sparkapi.com/v1/`,
     method: 'POST',
     body: {},
     headers: {
+      'Authorization': `Bearer ${token}`,
       'X-SparkApi-User-Agent': 'sharon_caron'
     },
     json: true
   }).then((response) => {
-    res.send({ token: response.D.Results[0].AuthToken});
-    console.log(token)
+    res.send(response);
   }).catch(err => res.status(400).send(err))
 });
 
 
 router.get('/search', function(req, res){
   rp({
-    uri: 'https://sparkapi.com/v1/listings',
+    uri: `https://sparkapi.com/v1/my/listings`,
     method: 'GET',
     headers: {
+      'Authorization': `Bearer ${token}`,
       'X-SparkApi-User-Agent': 'sharon_caron'
-    }
+    },
+    json: true
   }).then((response) => {
-      // console.log(res);
-      // var dataObj = JSON.parse(body);
-      // res.send(dataObj);
-      res.send(JSON.parse(response))
+      res.send(response)
   }).catch(err => console.log(err));
 });
 
