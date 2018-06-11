@@ -131,6 +131,11 @@ strong {
 .listing-summary {
   margin: 20px;
   text-align: center;
+  border: 1px solid black;
+}
+
+.list-price {
+  font-size: 24px;
 }
 
 .space-list-summary {

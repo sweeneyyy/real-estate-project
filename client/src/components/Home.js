@@ -7,18 +7,20 @@ function FeaturedListingDisplay (props) {
     <ul className='featured-list'>
       {props.featuredListings.map(function (listing) {
         return (
-          <li key={listing.Id} className='listing-summary'>
+          <li key={listing.StandardFields.ListingId} className='listing-summary'>
             <ul className='space-list-summary'>
               <li>
                 <img
                   className='listing-primary-photo'
                   src='https://placeimg.com/250/250/arch/grayscale'
                   alt='Primary listing photo'
-                  />
+                />
               </li>
-              <li>${listing.StandardFields.CurrentPrice}</li>
+              <li className='list-price'>${listing.StandardFields.CurrentPrice}</li>
+              <li>{listing.StandardFields.BedsTotal} Beds | {listing.StandardFields.BathsTotal} Baths | {listing.StandardFields.BuildingAreaTotal} SQFT</li>
               <li>{listing.StandardFields.UnparsedFirstLineAddress}</li>
-              <li>{listing.StandardFields.City}, {listing.StandardFields.StateOrProvince}</li>
+              <li>{listing.StandardFields.City}, {listing.StandardFields.StateOrProvince} {listing.StandardFields.PostalCode}</li>
+              <li>{listing.StandardFields.SubdivisionName} Subdivision</li>
             </ul>
           </li>
         )
