@@ -66,6 +66,10 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style-type: none;
+}
+
 strong {
   color: var(--red-color);
 }
@@ -116,6 +120,23 @@ strong {
 .active {
   font-weight: bold;
 }
+/* Listings General */
+
+.featured-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.listing-summary {
+  margin: 20px;
+  text-align: center;
+}
+
+.space-list-summary {
+  margin-bottom: 7px;
+}
+
 /* Buy */
 
 .image-buy {
