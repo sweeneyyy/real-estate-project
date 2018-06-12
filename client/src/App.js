@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import axios from 'axios';
-import Footer from './layout/Footer.js';
+
+// Layout elements
 import Nav from './layout/Nav.js';
 import Toolbar from './layout/Toolbar.js';
+import Footer from './layout/Footer.js';
+
+// Page routes
 import Home from './components/Home.js';
 import Buy from './components/Buy.js';
 import Sell from './components/Sell.js';

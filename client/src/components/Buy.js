@@ -20,7 +20,7 @@ function BuyIntroduction(props) {
   return (
     <div>
       <p className='buyOrSell-intro'>We love helping buyers <strong>find their dream home</strong>. That's why we work with each client individually, taking the time to understand their unique lifestyles, needs and wishes. This is about more than a certain number of bedrooms or a particular ZIP code. It's about your life, and it's important to us.</p>
-      <img src="https://picsum.photos/g/1300/300/?random" className="image-buy"/>
+      <img src='https://picsum.photos/g/1300/300/?random' className='image-buy'/>
     </div>
   );
 }
