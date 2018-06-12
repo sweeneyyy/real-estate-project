@@ -62,10 +62,10 @@ class Home extends Component {
       <div>
         <div className='background-image'></div>
           <header className='home'>
-            <h1>The Sharon & Caron Group</h1>
+            <h1>Your Real Estate Resource</h1>
           </header>
-          <hr />
           <section className='home'>
+            <p>Experienced Realtors Helping you Buy, Sell and Invest in Boca Raton, Delray Beach and Highland Beach</p>
             <h1>Featured Listings</h1>
             <FeaturedListingDisplay featuredListings={this.state.featuredListings}/>
           </section>
