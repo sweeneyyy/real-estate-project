@@ -36,8 +36,8 @@ function Nav() {
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName='active' to='/about'>
-          About Us
+        <NavLink activeClassName='active' to='/contact'>
+          Contact
         </NavLink>
       </li>
     </ul>

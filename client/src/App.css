@@ -129,17 +129,30 @@ strong {
 }
 
 .listing-summary {
-  margin: 20px;
-  text-align: center;
-  border: 1px solid black;
+  margin: 5px;
+  border: 1px solid var(--main-gray-color);
 }
 
 .list-price {
   font-size: 24px;
 }
 
+.list-address {
+  font-size: 20px;
+}
+
+.list-info {
+  font-size: 14px;
+  color: var(--main-gray-color);
+}
+
 .space-list-summary {
   margin-bottom: 7px;
+  padding: 10px;
+}
+
+.space-list-summary li {
+  margin: 8px 0;
 }
 
 /* Buy */

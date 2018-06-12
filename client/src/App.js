@@ -11,7 +11,8 @@ import Sell from './components/Sell.js';
 import Rent from './components/Rent.js';
 import Search from './components/Search.js';
 import Neighborhoods from './components/Neighborhoods.js';
-import About from './components/About.js';
+import Results from './components/Results.js';
+import Contact from './components/Contact.js';
 
 class App extends Component {
   render() {
@@ -28,7 +29,8 @@ class App extends Component {
               <Route path='/rent' component={Rent} />
               <Route path='/search' component={Search} />
               <Route path='/neighborhoods' component={Neighborhoods} />
-              <Route path='/about' component={About} />
+              <Route path='/results' component={Results} />
+              <Route path='/contact' component={Contact} />
             </div>
           </div>
         </Router>

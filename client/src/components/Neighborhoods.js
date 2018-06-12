@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 function NeighborhoodSection(props) {
   return (
@@ -21,6 +23,24 @@ NeighborhoodSection.propTypes = {
 }
 
 class Neighborhoods extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      selectedNeighborhood: '',
+      listings: []
+    }
+  }
+  componentDidMount() {
+    axios.get('/listings/neighborhoods', {
+
+    }).then((res) => {
+      this.setState({neighborhoodListings: res.data.D.Results});
+      console.log('listings', res.data.D.Results);
+    }).catch((err) => {
+      console.log('error:', err);
+    });
+  }
+
   render() {
     return (
       <div>
