@@ -37,13 +37,15 @@ body {
 h1, h2 {
   font-family: var(--header-font);
   text-transform: uppercase;
+  text-align: center;
 }
 
 section {
   margin: 60px 0;
 }
 
-.header {
+header {
+  font-family: var(--header-font);
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -142,44 +144,38 @@ header.home {
 
 header.home h1 {
   font-size: 3em;
-  color: white;
   letter-spacing: 4px;
-  display: inline-block;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
-  text-shadow: 0px 1px 6px rgba(0,0,0,0.6);
 }
 
-section.home p {
+header.home p {
   font-family: var(--body-font);
-  text-transform: none;
   font-size: 1.5em;
   line-height: 1.5em;
   text-align: center;
-}
-
-.background-image {
-  position: absolute;
-  width: 100%;
-  min-height: 200vh;
-  z-index: -1;
-  /* margin: 0; */
-  top: 0;
-  left: 0;
-  background: 
-    linear-gradient(
-     rgba(150, 150, 150, 0.45),
-     rgba(150, 150, 150, 0.45)
-     ),
-     url('./img/background_1.jpg') no-repeat;
-  background-size: contain;
 }
 
 section.home {
   flex-direction: column;
   min-height: 70vh;
 }
+/* .background-image {
+  position: absolute;
+  width: 100%;
+  min-height: 200vh;
+  z-index: -1;
+  margin: 0;
+  top: 0;
+  left: 0; 
+  background: 
+    linear-gradient(
+     rgba(150, 150, 150, 0.45),
+     rgba(150, 150, 150, 0.45)
+     ),
+     url('./img/background_2.jpg') no-repeat;
+  background-size: contain;
+} */ 
 
 /* Listings General */
 
@@ -354,38 +350,6 @@ section.home {
   flex-direction: column;
   width: 50%;
 } 
-
-/* Flash Messages */
-
-.success, .error {
-  border-radius: 2px;
-  padding: 10px 30px;
-  width: 75%;
-  margin: 10px auto;
-}
-
-.error {
-  background-color: pink;
-  color: red;
-  border: 1px solid red;
-}
-
-.success {
-  background-color: #ceffce;
-  color: green;
-  border: 1px solid green;
-}
-
-.no-flash {
-  display: none;
-}
-
-.x-button {
-  background-color: red;
-  color: white;
-  border-radius: 2px;
-  float: right;
-}
 
 /* Footer */
 
