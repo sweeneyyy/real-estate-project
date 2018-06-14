@@ -1,45 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import ListingSummary from './components/ListingSummary.js';
-import PropTypes from 'prop-types';
+import ListingSummary from './ListingSummary.js';
 
 //Images
 import agentphoto from '../img/agent-photo-crop.jpg';
-
-function FeaturedListingDisplay (props) {
-  const priceFormatter = new Intl.NumberFormat();
-
-  return (
-    <ul className='featured-list'>
-      {props.featuredListings.map(function (listing) {
-        return (
-          <li key={listing.StandardFields.ListingId} className='listing-summary'>
-            <ul>
-              <li>
-                <img
-                  className='listing-primary-photo'
-                  src={listing.StandardFields.Photos[0].Uri300}
-                  alt={'Primary photo for' + listing.StandardFields.ListingId}
-                />
-              </li>
-            </ul>
-            <ul className='space-list-summary'>
-              <li className='list-price'>${priceFormatter.format(listing.StandardFields.CurrentPrice)}</li>
-              <li className='list-info'>{listing.StandardFields.BedsTotal} Beds | {listing.StandardFields.BathsTotal} Baths | {listing.StandardFields.BuildingAreaTotal} SQFT</li>
-              <li className='list-address'>{listing.StandardFields.UnparsedFirstLineAddress}</li>
-              <li className='list-address'>{listing.StandardFields.City}, {listing.StandardFields.StateOrProvince} {listing.StandardFields.PostalCode}</li>
-              <li className='list-info'>{listing.StandardFields.SubdivisionName} Subdivision</li>
-            </ul>
-          </li>
-        )
-      })}
-    </ul>
-  )
-}
-
-FeaturedListingDisplay.propTypes = {
-  featuredListings: PropTypes.array.isRequired
-}
 
 class Home extends Component {
   constructor (props) {
@@ -61,6 +25,10 @@ class Home extends Component {
   }
 
   render(){
+    const display = this.state.featuredListings.map((listing, index) => {
+      return (<ListingSummary key={index} listing={listing} />)
+    })
+
     return (
       <div>
         <div className='background-image'></div>
@@ -79,7 +47,7 @@ class Home extends Component {
           </section>
           <section className='home'>
             <h1>Featured Listings</h1>
-            <FeaturedListingDisplay featuredListings={this.state.featuredListings}/>
+            {display}
           </section>
       </div>
     );

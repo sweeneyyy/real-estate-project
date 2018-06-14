@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Logout from '../auth/Logout.js';
 import { NavLink } from 'react-router-dom';
 
 function Nav() {

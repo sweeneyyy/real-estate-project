@@ -4,7 +4,7 @@ const router = express.Router();
 // api access token for auth
 const token = process.env.ACCESS_TOKEN;
 
-// create new session for api auth
+// Create new session for api auth
 router.post(`/`, (req, res) => {
   return rp({
     uri: `https://sparkapi.com/v1/`,
@@ -35,7 +35,7 @@ router.get('/search', (req, res) => {
     },
     json: true
   })
-  .then((response) => res.send(response)) // this is the same as { return res.send(response)) }
+  .then((response) => res.send(response)) 
   .catch(err => res.status(400).send(`ERROR: ${err}`));
 });
 
