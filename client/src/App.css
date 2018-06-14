@@ -160,6 +160,17 @@ section.home {
   flex-direction: column;
   min-height: 70vh;
 }
+
+.agent-photo {
+  border-radius: 50%;
+  width: 50%;
+}
+
+.agent-bio {
+  width: 40%;
+  line-height: 1.7em;
+}
+
 /* .background-image {
   position: absolute;
   width: 100%;
