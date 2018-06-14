@@ -25,9 +25,9 @@ class Home extends Component {
   }
 
   render(){
-    const display = this.state.featuredListings.map((listing, index) => {
+    const displayFeaturedListings = this.state.featuredListings.map((listing, index) => {
       return (<ListingSummary key={index} listing={listing} />)
-    })
+    });
 
     return (
       <div>
@@ -47,7 +47,9 @@ class Home extends Component {
           </section>
           <section className='home'>
             <h1>Featured Listings</h1>
-            {display}
+              <ul className='featured-list'>
+                {displayFeaturedListings}
+              </ul>
           </section>
       </div>
     );
