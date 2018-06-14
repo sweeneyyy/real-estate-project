@@ -6,10 +6,6 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
 
-// Mongoose stuff
-var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/MERN', {useMongoClient: true});
-
 // Set up middleware
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -24,7 +20,6 @@ app.use(function(req, res, next) {
 });
 
 // Controllers
-app.use('/auth', require('./routes/auth'));
 app.use('/listings', require('./routes/listings'));
 
 app.get('*', function(req, res, next) {
