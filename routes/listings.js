@@ -5,7 +5,7 @@ const router = express.Router();
 const token = process.env.ACCESS_TOKEN;
 
 // create new session for api auth
-router.post(`/`, function(req, res) {
+router.post(`/`, (req, res) => {
   return rp({
     uri: `https://sparkapi.com/v1/`,
     method: 'POST',
@@ -15,14 +15,14 @@ router.post(`/`, function(req, res) {
       'X-SparkApi-User-Agent': 'sharon_caron'
     },
     json: true
-  }).then((response) => {
-    res.send(response);
-  }).catch(err => res.status(400).send(err))
+  })
+  .then((response) => res.send(response))
+  .catch(err => res.status(400).send(err))
 });
 
 // Featured listings from Sharon & Caron - Active status only
-router.get('/search', function(req, res){
-  rp({
+router.get('/search', (req, res) => {
+  return rp({
     uri: `https://sparkapi.com/v1/my/listings`,
     qs: {
       _filter: 'StandardStatus Eq \'Active\'',
@@ -34,14 +34,14 @@ router.get('/search', function(req, res){
       'X-SparkApi-User-Agent': 'sharon_caron'
     },
     json: true
-  }).then((response) => {
-      res.send(response)
-  }).catch(err => console.log(err));
+  })
+  .then((response) => res.send(response)) // this is the same as { return res.send(response)) }
+  .catch(err => res.status(400).send(`ERROR: ${err}`));
 });
 
 // Highland Beach Oceanfront condos only
-router.get('/neighborhoods', function(req, res){
-  rp({
+router.get('/neighborhoods', (req, res) => {
+  return rp({
     uri: `https://sparkapi.com/v1/listings`,
     qs: {
       _filter: 'StandardStatus Eq \'Active\' And City Eq \'Highland Beach\' And PropertySubType Eq \'Condo/Coop\'',
@@ -53,9 +53,9 @@ router.get('/neighborhoods', function(req, res){
       'X-SparkApi-User-Agent': 'sharon_caron'
     },
     json: true
-  }).then((response) => {
-      res.send(response)
-  }).catch(err => console.log(err));
+  })
+  .then((response) => res.send(response))
+  .catch(err => res.status(400).send(`ERROR: ${err}`));
 });
 
 

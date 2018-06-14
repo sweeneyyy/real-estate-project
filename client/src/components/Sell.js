@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BuyOrSellSections from './BuyOrSellSections.js';
 import SellerForm from './SellerForm.js';
-import copyData from '../buyOrSell.json';
+import copyData from '../utils/buyOrSell.json';
 
 function SellIntroduction(props) {
   return (
@@ -21,7 +21,7 @@ class Sell extends Component {
         <h1>Sell With Sharon & Caron</h1>
         <SellIntroduction />
         <div className='buyOrSell-container'>
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='fas fa-clipboard-check'
             heading={sellCopy.sectionOneHeading}
             text={sellCopy.sectionOneText}
@@ -31,22 +31,22 @@ class Sell extends Component {
             heading={sellCopy.sectionTwoHeading}
             text={sellCopy.sectionTwoText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='far fa-money-bill-alt'
             heading={sellCopy.sectionThreeHeading}
             text={sellCopy.sectionThreeText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='far fa-calendar-alt'
             heading={sellCopy.sectionFourHeading}
             text={sellCopy.sectionFourText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='fas fa-dollar-sign'
             heading={sellCopy.sectionFiveHeading}
             text={sellCopy.sectionFiveText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='fas fa-globe'
             heading={sellCopy.sectionSixHeading}
             text={sellCopy.sectionSixText}

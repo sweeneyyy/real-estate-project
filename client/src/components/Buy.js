@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BuyerForm from './BuyerForm.js';
 import BuyOrSellSections from './BuyOrSellSections.js';
-import copyData from '../buyOrSell.json';
+import copyData from '../utils/buyOrSell.json';
 
 function BuySectionDivider(props) {
   return (
@@ -34,7 +34,7 @@ class Buy extends Component {
         <h1>Buy with Sharon & Caron</h1>
         <BuyIntroduction />
         <div className='buyOrSell-container'>
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='fas fa-mobile-alt'
             heading={buyCopy.sectionOneHeading}
             text={buyCopy.sectionOneText}
@@ -44,29 +44,29 @@ class Buy extends Component {
             heading={buyCopy.sectionTwoHeading}
             text={buyCopy.sectionTwoText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='far fa-thumbs-up'
             heading={buyCopy.sectionThreeHeading}
             text={buyCopy.sectionThreeText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='far fa-calendar-alt'
             heading={buyCopy.sectionFourHeading}
             text={buyCopy.sectionFourText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='fas fa-home'
             heading={buyCopy.sectionFiveHeading}
             text={buyCopy.sectionFiveText}
           />
-          <BuyOrSellSections 
+          <BuyOrSellSections
             icon='far fa-money-bill-alt'
             heading={buyCopy.sectionSixHeading}
             text={buyCopy.sectionSixText}
           />
         </div>
-        <BuySectionDivider 
-            message={'It\'s Free to Have Us As Your Buyer\'s Agent!'} 
+        <BuySectionDivider
+            message={'It\'s Free to Have Us As Your Buyer\'s Agent!'}
         />
         <div className='buyOrSell-container'>
           <BuyerForm />
