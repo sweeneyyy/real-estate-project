@@ -158,17 +158,19 @@ header.home p {
 
 section.home {
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 .agent-photo {
   border-radius: 50%;
-  width: 50%;
+  width: 40%;
 }
 
 .agent-bio {
   width: 40%;
   line-height: 1.7em;
+  display: inline-block;
+  margin: 80px 50px;
 }
 
 /* .background-image {
