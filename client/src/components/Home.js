@@ -9,11 +9,13 @@ class Home extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      featuredListings: []
+      featuredListings: [],
+      pendingListings: []
     }
   }
   // pull in agent featured listings on page load
   componentDidMount() {
+    // active listings
     axios.get('/listings/search', {
 
     }).then((res) => {
@@ -22,10 +24,24 @@ class Home extends Component {
     }).catch((err) => {
       console.log('error:', err);
     });
+
+    // pending listings
+    axios.get('/listings/search/pending', {
+
+    }).then((res) => {
+      this.setState({pendingListings: res.data.D.Results});
+      console.log('pending', res.data.D.Results);
+    }).catch((err) => {
+      console.log('error', err)
+    });
   }
 
   render(){
     const displayFeaturedListings = this.state.featuredListings.map((listing, index) => {
+      return (<ListingSummary key={index} listing={listing} />)
+    });
+
+    const displayPendingListings = this.state.pendingListings.map((listing, index) => {
       return (<ListingSummary key={index} listing={listing} />)
     });
 
@@ -49,6 +65,12 @@ class Home extends Component {
             <h1>Featured Listings</h1>
               <ul className='featured-list'>
                 {displayFeaturedListings}
+              </ul>
+          </section>
+          <section className='home'>
+            <h1>Under Contract</h1>
+              <ul className='featured-list'>
+                {displayPendingListings}
               </ul>
           </section>
       </div>
