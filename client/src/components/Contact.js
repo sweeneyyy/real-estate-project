@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { GoogleApiWrapper } from 'google-maps-react';
+import MapContainer from './MapContainer.js';
 
 class Contact extends Component {
   render(){
@@ -17,9 +19,12 @@ class Contact extends Component {
             <i className='far fa-envelope'></i>
             info@sharoncaron.com
           </p>
+          <MapContainer google={this.props.google} />
       </div>
     );
   }
 }
 
-export default Contact;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyCblFukI6795s5YfGTqYXLXNQBpjiKpmcs'
+})(Contact)
