@@ -59,7 +59,7 @@ class SellerForm extends Component {
               </select>
             </label>
             <label for='timeToSell'>
-              <p>Timeframe to Sell</p>
+              <p>Timeframe</p>
               <select name='timeToSell'>
                 <option value='' selected disabled hidden>Choose</option>
                 <option value='Immediately'>Immediately</option>

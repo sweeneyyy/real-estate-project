@@ -371,6 +371,17 @@ section.home {
   width: 50%;
 } 
 
+/* Contact */
+
+.contact h1, .contact h2 {
+  text-align: left;
+}
+
+.contact i {
+  margin-right: 10px;
+  color: var(--red-color);
+}
+
 /* Footer */
 
 .footer {

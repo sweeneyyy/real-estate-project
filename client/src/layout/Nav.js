@@ -19,11 +19,11 @@ function Nav() {
           Sell
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink activeClassName='active' to='/rent'>
           Rent
         </NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink activeClassName='active' to='/search'>
           Property Search
