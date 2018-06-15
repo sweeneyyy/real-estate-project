@@ -20,12 +20,13 @@ router.post(`/`, (req, res) => {
   .catch(err => res.status(400).send(err))
 });
 
-// Featured listings from Sharon & Caron - Active status
+// Featured listings from Agent - Active status
 router.get('/search', (req, res) => {
   return rp({
     uri: `https://sparkapi.com/v1/my/listings`,
     qs: {
       _filter: 'StandardStatus Eq \'Active\'',
+      _orderby: '-CurrentPrice',
       _expand: 'PrimaryPhoto'
     },
     method: 'GET',
@@ -39,12 +40,33 @@ router.get('/search', (req, res) => {
   .catch(err => res.status(400).send(`ERROR: ${err}`));
 });
 
-// Featured listings from Sharon & Caron - Pending status
+// Featured listings from Agent - Pending status
 router.get('/search/pending', (req, res) => {
   return rp({
     uri: `https://sparkapi.com/v1/my/listings`,
     qs: {
       _filter: 'StandardStatus Eq \'Pending\'',
+      _orderby: '-CurrentPrice',
+      _expand: 'PrimaryPhoto'
+    },
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'X-SparkApi-User-Agent': 'sharon_caron'
+    },
+    json: true
+  })
+  .then((response) => res.send(response)) 
+  .catch(err => res.status(400).send(`ERROR: ${err}`));
+});
+
+// Featured listings from Agent - Sold status
+router.get('/search/sold', (req, res) => {
+  return rp({
+    uri: `https://sparkapi.com/v1/my/listings`,
+    qs: {
+      _filter: 'StandardStatus Eq \'Closed\' And PropertyClass Eq \'Residential\' And CloseDate Ge years(-2)',
+      _orderby: '-CurrentPrice',
       _expand: 'PrimaryPhoto'
     },
     method: 'GET',

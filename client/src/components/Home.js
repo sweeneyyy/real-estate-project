@@ -10,7 +10,8 @@ class Home extends Component {
     super(props);
     this.state = {
       featuredListings: [],
-      pendingListings: []
+      pendingListings: [],
+      soldListings: []
     }
   }
   // pull in agent featured listings on page load
@@ -34,6 +35,16 @@ class Home extends Component {
     }).catch((err) => {
       console.log('error', err)
     });
+
+    // sold listings
+    axios.get('/listings/search/sold', {
+
+    }).then((res) => {
+      this.setState({soldListings: res.data.D.Results});
+      console.log('sold', res.data.D.Results);
+    }).catch((err) => {
+      console.log('error', err)
+    });
   }
 
   render(){
@@ -42,6 +53,10 @@ class Home extends Component {
     });
 
     const displayPendingListings = this.state.pendingListings.map((listing, index) => {
+      return (<ListingSummary key={index} listing={listing} />)
+    });
+
+    const displaySoldListings = this.state.soldListings.map((listing, index) => {
       return (<ListingSummary key={index} listing={listing} />)
     });
 
@@ -71,6 +86,12 @@ class Home extends Component {
             <h1>Under Contract</h1>
               <ul className='featured-list'>
                 {displayPendingListings}
+              </ul>
+          </section>
+          <section className='home'>
+            <h1>Sold</h1>
+              <ul className='featured-list'>
+                {displaySoldListings}
               </ul>
           </section>
       </div>

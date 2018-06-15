@@ -201,6 +201,13 @@ section.home {
 .listing-summary {
   margin: 5px;
   border: 1px solid var(--main-gray-color);
+  max-width: 302px;
+}
+
+.listing-primary-photo {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
 }
 
 .list-price {
