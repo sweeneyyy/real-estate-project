@@ -7,7 +7,7 @@ function SellIntroduction(props) {
   return (
     <div>
       <p className='buyOrSell-intro'>With over 50 years of combined experience we have the know-how to <strong>put a sold sign</strong> on your property. We commit to working with you individually and take the time to understand the unique selling points of your home and neighborhood.  Most agents simply list homes.  We market them - actively targeting the types of buyers most likely to want your home.</p>
-      <img src="https://picsum.photos/g/1300/300/?random" className="image-buy"/>
+      <img src="https://picsum.photos/g/1300/300/?random" alt='Divider' className="image-buy"/>
     </div>
   );
 }
@@ -52,7 +52,7 @@ class Sell extends Component {
             text={sellCopy.sectionSixText}
           />
         </div>
-        <img src="https://picsum.photos/g/1300/300/?random" className="image-buy"/>
+        <img src="https://picsum.photos/g/1300/300/?random" alt='Divider' className="image-buy"/>
         <div className='buyOrSell-container'>
           <SellerForm />
         </div>
