@@ -36,8 +36,10 @@ export default class MapContainer extends Component {
     // Map works best when style is specified inside the render function
     // Dimensions must be set in order for it render
     const style = {
-      width: '50vw',
-      height: '40vh'
+      width: '50%',
+      height: '40vh',
+      display: 'inline-block',
+      top: '70px'
     }
 
     return (

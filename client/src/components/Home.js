@@ -62,7 +62,7 @@ class Home extends Component {
 
     return (
       <div>
-        <div className='background-image'></div>
+        {/* <div className='background-image'></div> */}
           <header className='home'>
             <h1>Your Real Estate Resource</h1>
             <p>Experienced Realtors Helping you Buy, Sell and Invest in <br /> Boca Raton, Delray Beach and Highland Beach</p>

@@ -7,12 +7,13 @@ const mapKey = process.env.API_KEY_MAPS;
 class Contact extends Component {
   render(){
     return (
-      <div className='contact'>
+      <div>
         <h1>Contact Us</h1>
+        <div className='contact'>
           <h2>The Sharon & Caron Group</h2>
           <p>Keller Williams Realty Services<br />
             2424 N Federal Hwy, Suite 150<br />
-            Boca Raton, FL 33431</p>
+            Boca Raton, FL 3343</p>
           <p>
             <i className='fas fa-phone'></i>
             561.699.6117
@@ -21,7 +22,8 @@ class Contact extends Component {
             <i className='far fa-envelope'></i>
             info@sharoncaron.com
           </p>
-          <MapContainer google={this.props.google} />
+        </div>
+        <MapContainer google={this.props.google} />
       </div>
     );
   }
