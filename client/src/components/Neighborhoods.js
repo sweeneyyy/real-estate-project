@@ -43,7 +43,7 @@ class Neighborhoods extends Component {
 
   render() {
     return (
-      <div>
+      <div className='neighborhoods'>
         <h1>Neighborhoods</h1>
         <div className='row'>
           <NeighborhoodSection

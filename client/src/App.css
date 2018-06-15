@@ -350,6 +350,10 @@ section.home {
 
 /* Neighborhoods */
 
+.neighborhoods h2 {
+  text-align: left;
+}
+
 .neighborhood-sections {
   font-size: 1em;
   font-weight: 100;

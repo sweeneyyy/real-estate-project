@@ -12,12 +12,12 @@ export default class MapContainer extends Component {
       const {google} = this.props;
       const maps = google.maps;
 
-      const mapRef = this.refs.map;
-      const node = ReactDOM.findDOMNode(mapRef);
+      const mapRef = this.refs.map; // looks for HTML div ref 'map'
+      const node = ReactDOM.findDOMNode(mapRef); // finds the 'map' div in the React DOM, names it node
 
       const mapConfig = {
         center: {lat: 26.371750, lng: -80.075057}, // sets center to office location
-        zoom: 9,
+        zoom: 9, // higher number is closer in
         mapTypeId: 'roadmap'
       }
 
@@ -33,6 +33,8 @@ export default class MapContainer extends Component {
   }
 
   render() {
+    // Map works best when style is specified inside the render function
+    // Dimensions must be set in order for it render
     const style = {
       width: '50vw',
       height: '40vh'

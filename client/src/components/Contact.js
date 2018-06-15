@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { GoogleApiWrapper } from 'google-maps-react';
 import MapContainer from './MapContainer.js';
+// api key for google maps
+const mapKey = process.env.API_KEY_MAPS;
 
 class Contact extends Component {
   render(){
@@ -26,5 +28,5 @@ class Contact extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCblFukI6795s5YfGTqYXLXNQBpjiKpmcs'
+  apiKey: mapKey
 })(Contact)
