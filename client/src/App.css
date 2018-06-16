@@ -271,7 +271,7 @@ section.home {
   margin: 70px 0;
 }
 
-.buy-CTA, .sell-CTA {
+.buy-CTA, .sell-CTA, .contact-CTA {
   width: 30%;
   background: var(--red-color);
   color: #fff;
@@ -281,7 +281,8 @@ section.home {
 }
 
 .buy-CTA h1, .buy-CTA p,
-.sell-CTA h1, .sell-CTA p {
+.sell-CTA h1, .sell-CTA p,
+.contact-CTA h1, .contact-CTA p {
   font-weight: 100;
   line-height: 30px;
 }
@@ -289,12 +290,13 @@ section.home {
 .buyer-profile, .seller-profile {
   font-weight: 100;
   margin-top: 0;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 
 /* Form */
 
-.buyer-form, .seller-form {
+.buyer-form, .seller-form,
+.contact-form {
   margin-left: 60px; 
 }
 
@@ -383,7 +385,7 @@ section.home {
 
 .contact {
   /* flex-direction: column; */
-  min-height: 80vh;
+  min-height: 40vh;
   width: 40%;
   display: inline-block;
   line-height: 1.7em;
@@ -400,6 +402,20 @@ section.home {
   color: var(--red-color);
 }
 
+.user-message {
+  /* flex-direction: column; */
+  min-height: 40vh;
+  /* width: 40%; */
+  /* display: inline-block; */
+  line-height: 1.7em;
+  /* margin-right: 40px; */
+
+}
+.contact-form h1 {
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
 /* Footer */
 
 .footer {
