@@ -3,22 +3,22 @@ import Slider from 'react-slick';
 import axios from 'axios';
 import ListingSummary from './ListingSummary.js';
 
-class SoldSlider extends Component {
+class FeaturedSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      soldSlides: []
+      featuredSlides: []
     }
   }
   componentDidMount() {
-    // sold listings
-    axios.get('/listings/search/sold', {
+    // pull in agent featured listings on page load
+    axios.get('/listings/search', {
 
     }).then((res) => {
-      this.setState({soldSlides: res.data.D.Results});
-      console.log('sold', res.data.D.Results);
+      this.setState({featuredSlides: res.data.D.Results});
+      console.log('listings', res.data.D.Results);
     }).catch((err) => {
-      console.log('error', err)
+      console.log('error:', err);
     });
   }
 
@@ -31,17 +31,17 @@ class SoldSlider extends Component {
       slidesToShow: 3,
       slidesToScroll: 1
     }
-    
-    const soldSlidesToDisplay = this.state.soldSlides.map((listing, index) => {
+
+    const featuredSlidesToDisplay = this.state.featuredSlides.map((listing, index) => {
       return (<ListingSummary key={index} listing={listing} />)
     });
 
     return (
       <Slider {...settings}>
-        {soldSlidesToDisplay}
+        {featuredSlidesToDisplay}
       </Slider>
     );
   }
 }
 
-export default SoldSlider;
+export default FeaturedSlider;

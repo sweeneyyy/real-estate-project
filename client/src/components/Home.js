@@ -1,66 +1,17 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import ListingSummary from './ListingSummary.js';
+// Listing Sliders
+import FeaturedSlider from './FeaturedSlider.js';
+import PendingSlider from './PendingSlider.js';
 import SoldSlider from './SoldSlider.js';
-
 //Images
 import agentphoto from '../img/agent-photo-crop.jpg';
 
 class Home extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-      featuredListings: [],
-      pendingListings: [],
-      soldListings: []
-    }
-  }
-  // pull in agent featured listings on page load
-  componentDidMount() {
-    // active listings
-    axios.get('/listings/search', {
-
-    }).then((res) => {
-      this.setState({featuredListings: res.data.D.Results});
-      console.log('listings', res.data.D.Results);
-    }).catch((err) => {
-      console.log('error:', err);
-    });
-
-    // pending listings
-    axios.get('/listings/search/pending', {
-
-    }).then((res) => {
-      this.setState({pendingListings: res.data.D.Results});
-      console.log('pending', res.data.D.Results);
-    }).catch((err) => {
-      console.log('error', err)
-    });
-
-    // // sold listings
-    // axios.get('/listings/search/sold', {
-
-    // }).then((res) => {
-    //   this.setState({soldListings: res.data.D.Results});
-    //   console.log('sold', res.data.D.Results);
-    // }).catch((err) => {
-    //   console.log('error', err)
-    // });
   }
 
   render(){
-    const displayFeaturedListings = this.state.featuredListings.map((listing, index) => {
-      return (<ListingSummary key={index} listing={listing} />)
-    });
-
-    const displayPendingListings = this.state.pendingListings.map((listing, index) => {
-      return (<ListingSummary key={index} listing={listing} />)
-    });
-
-    // const displaySoldListings = this.state.soldListings.map((listing, index) => {
-    //   return (<ListingSummary key={index} listing={listing} />)
-    // });
-
     return (
       <div>
         {/* <div className='background-image'></div> */}
@@ -79,22 +30,15 @@ class Home extends Component {
           </section>
           <section className='home'>
             <h1>Featured Listings</h1>
-              <ul className='featured-list'>
-                {displayFeaturedListings}
-              </ul>
+              <FeaturedSlider settings={this.props.settings} />
           </section>
           <section className='home'>
             <h1>Under Contract</h1>
-              <ul className='featured-list'>
-                {displayPendingListings}
-              </ul>
+              <PendingSlider settings={this.props.settings} />
           </section>
           <section className='home'>
             <h1>Sold</h1>
-            <SoldSlider settings={this.props.settings}/>
-              {/* <ul className='featured-list'>
-                {displaySoldListings}
-              </ul> */}
+              <SoldSlider settings={this.props.settings}/>
           </section>
       </div>
     );

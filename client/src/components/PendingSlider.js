@@ -3,20 +3,20 @@ import Slider from 'react-slick';
 import axios from 'axios';
 import ListingSummary from './ListingSummary.js';
 
-class SoldSlider extends Component {
+class PendingSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      soldSlides: []
+      pendingSlides: []
     }
   }
   componentDidMount() {
-    // sold listings
-    axios.get('/listings/search/sold', {
+    // pending listings
+    axios.get('/listings/search/pending', {
 
     }).then((res) => {
-      this.setState({soldSlides: res.data.D.Results});
-      console.log('sold', res.data.D.Results);
+      this.setState({pendingSlides: res.data.D.Results});
+      console.log('pending', res.data.D.Results);
     }).catch((err) => {
       console.log('error', err)
     });
@@ -31,17 +31,17 @@ class SoldSlider extends Component {
       slidesToShow: 3,
       slidesToScroll: 1
     }
-    
-    const soldSlidesToDisplay = this.state.soldSlides.map((listing, index) => {
+
+    const pendingSlidesToDisplay = this.state.pendingSlides.map((listing, index) => {
       return (<ListingSummary key={index} listing={listing} />)
     });
 
     return (
       <Slider {...settings}>
-        {soldSlidesToDisplay}
+        {pendingSlidesToDisplay}
       </Slider>
     );
   }
 }
 
-export default SoldSlider;
+export default PendingSlider;

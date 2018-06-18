@@ -20,7 +20,7 @@ function ListingSummary (props) {
         <li className='list-info'>{listing.BedsTotal} Beds | {listing.BathsTotal} Baths | {listing.BuildingAreaTotal} SQFT</li>
         <li className='list-address'>{listing.UnparsedFirstLineAddress}</li>
         <li className='list-address'>{listing.City}, {listing.StateOrProvince} {listing.PostalCode}</li>
-        <li className='list-info'>{listing.SubdivisionName} Subdivision</li>
+        <li className='list-info'>{listing.SubdivisionName}</li>
       </ul>
     </li>
   )
