@@ -15,6 +15,7 @@ import Rent from './components/Rent.js';
 import Search from './components/Search.js';
 import Neighborhoods from './components/Neighborhoods.js';
 import Results from './components/Results.js';
+import Reviews from './components/Reviews.js';
 import Contact from './components/Contact.js';
 
 class App extends Component {
@@ -33,6 +34,7 @@ class App extends Component {
               <Route path='/search' component={Search} />
               <Route path='/neighborhoods' component={Neighborhoods} />
               <Route path='/results' component={Results} />
+              <Route path='/reviews' component={Reviews} />
               <Route path='/contact' component={Contact} />
             </div>
           </div>

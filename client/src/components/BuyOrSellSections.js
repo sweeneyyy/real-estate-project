@@ -15,8 +15,8 @@ function BuyOrSellSections(props) {
 
 BuyOrSellSections.PropTypes = {
   icon: PropTypes.string.isRequired,
-  buySectionHeader: PropTypes.string.isRequired,
-  buySectionText: PropTypes.string.isRequired
+  header: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 }
 
 export default BuyOrSellSections;
