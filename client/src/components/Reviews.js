@@ -4,9 +4,9 @@ import reviewsCopy from '../utils/reviews.json';
 
 function DisplayReview(props) {
   return (
-    <div>
-      <p>{props.text}</p>
-      <p>- {props.author}</p>
+    <div className='reviews'>
+      <p className='review-text'>{props.text}</p>
+      <p><em>- {props.author}</em></p>
     </div>
   )
 }
@@ -45,3 +45,5 @@ class Reviews extends Component {
 }
 
 export default Reviews;
+
+

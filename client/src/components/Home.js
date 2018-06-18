@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ListingSummary from './ListingSummary.js';
+import SoldSlider from './SoldSlider.js';
 
 //Images
 import agentphoto from '../img/agent-photo-crop.jpg';
@@ -36,15 +37,15 @@ class Home extends Component {
       console.log('error', err)
     });
 
-    // sold listings
-    axios.get('/listings/search/sold', {
+    // // sold listings
+    // axios.get('/listings/search/sold', {
 
-    }).then((res) => {
-      this.setState({soldListings: res.data.D.Results});
-      console.log('sold', res.data.D.Results);
-    }).catch((err) => {
-      console.log('error', err)
-    });
+    // }).then((res) => {
+    //   this.setState({soldListings: res.data.D.Results});
+    //   console.log('sold', res.data.D.Results);
+    // }).catch((err) => {
+    //   console.log('error', err)
+    // });
   }
 
   render(){
@@ -56,9 +57,9 @@ class Home extends Component {
       return (<ListingSummary key={index} listing={listing} />)
     });
 
-    const displaySoldListings = this.state.soldListings.map((listing, index) => {
-      return (<ListingSummary key={index} listing={listing} />)
-    });
+    // const displaySoldListings = this.state.soldListings.map((listing, index) => {
+    //   return (<ListingSummary key={index} listing={listing} />)
+    // });
 
     return (
       <div>
@@ -90,9 +91,10 @@ class Home extends Component {
           </section>
           <section className='home'>
             <h1>Sold</h1>
-              <ul className='featured-list'>
+            <SoldSlider settings={this.props.settings}/>
+              {/* <ul className='featured-list'>
                 {displaySoldListings}
-              </ul>
+              </ul> */}
           </section>
       </div>
     );

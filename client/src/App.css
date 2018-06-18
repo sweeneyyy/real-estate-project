@@ -37,7 +37,7 @@ body {
 h1, h2 {
   font-family: var(--header-font);
   text-transform: uppercase;
-  text-align: center;
+  /* text-align: center; */
 }
 
 section {
@@ -147,6 +147,7 @@ header.home h1 {
   letter-spacing: 4px;
   width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
 header.home p {
@@ -159,6 +160,10 @@ header.home p {
 section.home {
   flex-direction: column;
   min-height: 80vh;
+}
+
+section.home h2, section.home h1 {
+  text-align: center;
 }
 
 .agent-photo {
@@ -376,6 +381,23 @@ section.home {
   flex-direction: column;
   width: 50%;
 } 
+
+/* Reviews */
+.reviews {
+  width: 60%;
+}
+
+.review-text{
+  line-height: 1.7em;
+}
+
+.review-text::before {
+  content: open-quote;
+}
+
+.review-text::after {
+  content: close-quote;
+}
 
 /* Contact */
 
