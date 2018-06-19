@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
+    <div className='nav-wrapper'>
     <ul className='nav'>
       <li>
         <NavLink exact activeClassName='active' to='/'>
@@ -24,11 +25,6 @@ function Nav() {
           Rent
         </NavLink>
       </li> */}
-      {/* <li>
-        <NavLink activeClassName='active' to='/search'>
-          Property Search
-        </NavLink>
-      </li> */}
       <li>
         <NavLink activeClassName='active' to='/neighborhoods'>
           Neighborhoods
@@ -45,6 +41,7 @@ function Nav() {
         </NavLink>
       </li>
     </ul>
+    </div>
   );
 }
 

@@ -3,11 +3,11 @@ import React from 'react';
 function Toolbar() {
   return (
     <ul className='toolbar'>
-      <li >
+      <li className='toolbar-contact'>
         <i className='fas fa-phone'></i>
         <a href='tel:561-302-3187'>561.302.3187</a>
       </li>
-      <li>
+      <li className='toolbar-contact'>
         <i className='far fa-envelope'></i>
         <a href='mailto:info@sharoncaron.com'>info@sharoncaron.com</a>
       </li>
