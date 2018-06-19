@@ -208,6 +208,7 @@ section.home h2, section.home h1 {
   margin: 5px;
   border: 1px solid var(--main-gray-color);
   max-width: 302px;
+  max-height: 386px;
 }
 
 .listing-primary-photo {
@@ -221,7 +222,7 @@ section.home h2, section.home h1 {
 }
 
 .list-address {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .list-info {
@@ -390,10 +391,11 @@ section.home h2, section.home h1 {
 /* Reviews */
 .reviews {
   width: 60%;
+  margin: 35px 0;
 }
 
 .review-text{
-  line-height: 1.7em;
+  line-height: 1.8em;
 }
 
 .review-text::before {

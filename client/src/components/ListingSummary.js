@@ -19,7 +19,7 @@ function ListingSummary (props) {
         <li className='list-price'>${new Intl.NumberFormat().format(listing.CurrentPrice)}</li>
         <li className='list-info'>{listing.BedsTotal} Beds | {listing.BathsTotal} Baths | {listing.BuildingAreaTotal} SQFT</li>
         <li className='list-address'>{listing.UnparsedFirstLineAddress}</li>
-        <li className='list-address'>{listing.City}, {listing.StateOrProvince} {listing.PostalCode}</li>
+        <li className='list-address-2'>{listing.City}, {listing.StateOrProvince} {listing.PostalCode}</li>
         <li className='list-info'>{listing.SubdivisionName}</li>
       </ul>
     </li>
