@@ -353,6 +353,17 @@ section.home h2, section.home h1 {
 }
 
 /* Neighborhoods */
+.coming-soon {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 65px;
+}
+
+.neighborhoods {
+  min-height: 90vh;
+}
+
 .neighborhoods h2 {
   text-align: left;
 }
@@ -398,6 +409,10 @@ section.home h2, section.home h1 {
 
 /* Contact */
 .contact {
+  min-height: 90vh;
+}
+
+.contact-details {
   min-height: 40vh;
   width: 40%;
   display: inline-block;
@@ -405,11 +420,11 @@ section.home h2, section.home h1 {
   margin-right: 40px;
 }
 
-.contact h2 {
+.contact-details h2 {
   text-align: left;
 }
 
-.contact i {
+.contact-details i {
   margin-right: 10px;
   color: var(--red-color);
 }

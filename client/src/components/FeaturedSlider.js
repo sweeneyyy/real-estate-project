@@ -16,6 +16,7 @@ class FeaturedSlider extends Component {
 
     }).then(res => {
       this.setState({featuredSlides: res.data.D.Results});
+      console.log('listings', res.data.D.Results)
     }).catch(err => console.log('error:', err));
   }
 

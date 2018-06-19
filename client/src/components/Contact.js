@@ -6,9 +6,9 @@ import MapContainer from './MapContainer.js';
 class Contact extends Component {
   render(){
     return (
-      <div>
+      <div className='contact'>
         <h1>Contact Us</h1>
-        <section className='contact'>
+        <section className='contact-details'>
           <h2>The Sharon & Caron Group</h2>
           <p>Keller Williams Realty Services<br />
             2424 N Federal Hwy, Suite 150<br />

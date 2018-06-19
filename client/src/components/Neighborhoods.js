@@ -44,6 +44,7 @@ class Neighborhoods extends Component {
   render() {
     return (
       <div className='neighborhoods'>
+        <p className='coming-soon'>[ Listings Coming Soon! ]</p>
         <h1>Neighborhoods</h1>
         <div className='row'>
           <NeighborhoodSection
