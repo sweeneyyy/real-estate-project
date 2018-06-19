@@ -12,7 +12,7 @@ class BuyerForm extends Component {
           <h1 className='buyer-profile'>Complete Your <strong>Buyer Profile</strong></h1>
             <label for='name'>
               <p>Name</p>
-              <input type='text' name='name' required />            
+              <input type='text' name='name' required />
             </label>
             <label for='email'>
               <p>Email</p>
@@ -77,7 +77,7 @@ class BuyerForm extends Component {
               <p>Desired neighborhoods and locations. Any special features like pool or outdoor space?</p>
             </label>
               <textarea name='desiredDetails' rows='10' cols='60'></textarea>
-          <input type='submit' value='Submit' />
+          <input type='submit' value='Submit' className='btn-primary'/>
         </form>
       </div>
     );

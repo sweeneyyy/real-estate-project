@@ -5,7 +5,7 @@ function ListingSummary (props) {
   const listing = props.listing.StandardFields;
 
   return (
-    <li key={props.listingId} className='listing-summary'>
+    <li key={listing.listingId} className='listing-summary'>
       <ul>
         <li>
           <img  

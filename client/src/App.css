@@ -37,7 +37,6 @@ body {
 h1, h2 {
   font-family: var(--header-font);
   text-transform: uppercase;
-  /* text-align: center; */
 }
 
 section {
@@ -54,16 +53,17 @@ header {
 }
 
 .btn-primary {
-  color: #e6e6e6;
-  background: #0a0a0a;
-  border: none;
-  font-size: 16px;
-  border-radius: 3px;
-  width: 200px;
-  text-align: center;
+  margin: 20px 0;
+  background: var(--font-color);
+  padding: 10px 20px;
+  border: 0;
+  font-size: 1em;
+  color: #fff;
+  font-family: var(--body-font);
+  width: 100px;
   display: block;
-  padding: 7px 0;
-  margin: 10px auto;
+  box-shadow: 4px 4px var(--light-gray-color);
+  text-decoration: none;
 }
 
 .btn-primary:hover:enabled {
@@ -178,23 +178,6 @@ section.home h2, section.home h1 {
   display: inline-block;
   margin: 80px 50px;
 }
-
-/* .background-image {
-  position: absolute;
-  width: 100%;
-  min-height: 200vh;
-  z-index: -1;
-  margin: 0;
-  top: 0;
-  left: 0; 
-  background: 
-    linear-gradient(
-     rgba(150, 150, 150, 0.45),
-     rgba(150, 150, 150, 0.45)
-     ),
-     url('./img/background_2.jpg') no-repeat;
-  background-size: contain;
-} */ 
 
 /* Listings General */
 
@@ -349,18 +332,6 @@ section.home h2, section.home h1 {
   font-weight: 400;
 }
 
-.flex-form input[type='submit'] {
-  margin: 20px 0;
-  background: var(--font-color);
-  padding: 10px 20px;
-  border: 0;
-  font-size: 1em;
-  color: #fff;
-  font-family: var(--body-font);
-  width: 100px;
-  display: block;
-}
-
 /* Neighborhoods */
 
 .neighborhoods h2 {
@@ -389,6 +360,7 @@ section.home h2, section.home h1 {
 } 
 
 /* Reviews */
+
 .reviews {
   width: 60%;
   margin: 35px 0;
@@ -408,18 +380,12 @@ section.home h2, section.home h1 {
 
 /* Contact */
 
-/* header.contact {
-  text-align: left;
-} */
-
 .contact {
-  /* flex-direction: column; */
   min-height: 40vh;
   width: 40%;
   display: inline-block;
   line-height: 1.7em;
   margin-right: 40px;
-
 }
 
 .contact h2 {
@@ -438,13 +404,14 @@ section.home h2, section.home h1 {
   /* display: inline-block; */
   line-height: 1.7em;
   /* margin-right: 40px; */
-
 }
+
 .contact-form h1 {
   font-weight: 100;
   margin-top: 0;
   margin-bottom: 40px;
 }
+
 /* Footer */
 
 .footer {

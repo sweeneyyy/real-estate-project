@@ -83,7 +83,7 @@ class SellerForm extends Component {
               <p>Any special features, updates since you purchased or comments?</p>
             </label>
               <textarea name='homeDetails' rows='10' cols='60'></textarea>
-          <input type='submit' value='Submit' />
+          <input type='submit' value='Submit' className='btn-primary'/>
         </form>
       </div>
     );

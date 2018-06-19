@@ -16,10 +16,7 @@ class SoldSlider extends Component {
 
     }).then((res) => {
       this.setState({soldSlides: res.data.D.Results});
-      console.log('sold', res.data.D.Results);
-    }).catch((err) => {
-      console.log('error', err)
-    });
+    }).catch(err => console.log('error', err));
   }
 
   render() {

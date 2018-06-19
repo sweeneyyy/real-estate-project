@@ -26,7 +26,7 @@ class ContactForm extends Component {
                 <p>Message</p>
               </label>
                 <textarea name='message' rows='10' cols='60'></textarea>
-            <input type='submit' value='Submit' />
+            <input type='submit' value='Submit' className='btn-primary' />
           </form>
         </div>
     )

@@ -23,9 +23,6 @@ class Contact extends Component {
           </p>
         </section>
         <MapContainer google={this.props.google} />
-        <section className='user-message'>
-          {/* <ContactForm /> */}
-        </section>
       </div>
     );
   }

@@ -14,12 +14,9 @@ class FeaturedSlider extends Component {
     // pull in agent featured listings on page load
     axios.get('/listings/search', {
 
-    }).then((res) => {
+    }).then(res => {
       this.setState({featuredSlides: res.data.D.Results});
-      console.log('listings', res.data.D.Results);
-    }).catch((err) => {
-      console.log('error:', err);
-    });
+    }).catch(err => console.log('error:', err));
   }
 
   render() {
