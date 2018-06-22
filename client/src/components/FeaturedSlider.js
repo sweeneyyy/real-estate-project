@@ -50,7 +50,11 @@ class FeaturedSlider extends Component {
     }
 
     const featuredSlidesToDisplay = this.state.featuredSlides.map((listing, index) => {
-      return (<ListingSummary key={index} listing={listing} />)
+      return (
+        <a href='/listing-detail'>
+          <ListingSummary key={index} listing={listing} />
+        </a>  
+      )
     });
 
     return (
