@@ -16,11 +16,11 @@ class ListingDetail extends Component {
     return (
       <div>
         <h2>Listing Detail Page</h2>
-        <img 
+        {/* <img 
           className='listing-primary-photo-detail'
           src={listing.StandardFields.Photos[0].Uri800}
           alt={'Photo for' + listing.StandardFields.listingId}
-        />
+        /> */}
       </div>
     )
   }

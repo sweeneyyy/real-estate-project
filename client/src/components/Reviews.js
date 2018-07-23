@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import reviewsCopy from '../utils/reviews.json';
+import ZillowWidget from './ZillowWidget.js';
 
 function DisplayReview(props) {
   return (
@@ -39,6 +40,7 @@ class Reviews extends Component {
           text={reviews.review04.text}
           author={reviews.review04.author}
         />
+        <ZillowWidget />
       </div>
     );
   }
