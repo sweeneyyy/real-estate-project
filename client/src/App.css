@@ -417,6 +417,10 @@ section.home h2, section.home h1 {
   content: close-quote;
 }
 
+/* .widget-review-text {
+  line-height: 1em;
+} */
+
 /* Contact */
 .contact {
   min-height: 90vh;
