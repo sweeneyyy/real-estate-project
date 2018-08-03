@@ -400,7 +400,7 @@ section.home h2, section.home h1 {
 } 
 
 /* Reviews */
-.reviews {
+.reviews { 
   width: 60%;
   margin: 35px 0;
 }
@@ -416,10 +416,6 @@ section.home h2, section.home h1 {
 .review-text::after {
   content: close-quote;
 }
-
-/* .widget-review-text {
-  line-height: 1em;
-} */
 
 /* Contact */
 .contact {

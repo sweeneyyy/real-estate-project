@@ -9,7 +9,7 @@ function DisplayReview(props) {
       <p className='review-text'>{props.text}</p>
       <p><em>- {props.author}</em></p>
     </div>
-  )
+  );
 }
 
 DisplayReview.PropTypes = {
@@ -24,6 +24,7 @@ class Reviews extends Component {
     return (
       <div>
         <h1>Reviews</h1>
+        <ZillowWidget />
         <DisplayReview 
           text={reviews.review01.text}
           author={reviews.review01.author}
@@ -40,12 +41,9 @@ class Reviews extends Component {
           text={reviews.review04.text}
           author={reviews.review04.author}
         />
-        <ZillowWidget />
       </div>
     );
   }
 }
 
 export default Reviews;
-
-
