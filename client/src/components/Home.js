@@ -31,10 +31,10 @@ class Home extends Component {
           <h1>Featured Listings</h1>
             <FeaturedSlider settings={this.props.settings} />
         </section>
-        <section className='home'>
+        {/* <section className='home'>
           <h1>Under Contract</h1>
             <PendingSlider settings={this.props.settings} />
-        </section>
+        </section> */}
         <section className='home'>
           <h1>Sold</h1>
             <SoldSlider settings={this.props.settings} />

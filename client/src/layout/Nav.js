@@ -25,11 +25,11 @@ function Nav() {
           Rent
         </NavLink>
       </li> */}
-      <li>
+      {/* <li>
         <NavLink activeClassName='active' to='/neighborhoods'>
           Neighborhoods
         </NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink activeClassName='active' to='/reviews'>
           Reviews

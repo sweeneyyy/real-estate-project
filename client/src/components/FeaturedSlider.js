@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import axios from 'axios';
 import ListingSummary from './ListingSummary.js';
@@ -48,12 +49,13 @@ class FeaturedSlider extends Component {
         }
       ]
     }
-
+    // TO DO change key - shouldn't be index! use MLS num 
+    // or something more specific
     const featuredSlidesToDisplay = this.state.featuredSlides.map((listing, index) => {
       return (
-        <a href='/listing-detail'>
+        <Link to={`/listing-detail/${index}`}>
           <ListingSummary key={index} listing={listing} />
-        </a>  
+        </Link>  
       )
     });
 
