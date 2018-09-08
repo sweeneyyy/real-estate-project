@@ -20,7 +20,21 @@ import Reviews from './components/Reviews.js';
 import Contact from './components/Contact.js';
 
 class App extends Component {
+  state = {
+    selectedListing: null
+  }
+
+  selectListing = (selectedListing) => {
+    this.setState({ selectedListing }, () => this.scrollTop());
+  }
+
+  scrollTop() {
+    window.scrollTo(0,0);
+  }
+
   render() {
+    const { selectedListing } = this.state;
+
     return (
       <div>
         <Router>
@@ -28,14 +42,18 @@ class App extends Component {
             <Toolbar />
             <Nav />
             <div className='container'>
-              <Route exact path='/' component={Home} />
+              <Route exact path='/' render={props => (
+                <Home selectListing={this.selectListing} />
+              )} />
               <Route path='/buy' component={Buy} />
               <Route path='/sell' component={Sell} />
               <Route path='/rent' component={Rent} />
               <Route path='/search' component={Search} />
               <Route path='/neighborhoods' component={Neighborhoods} />
               <Route path='/results' component={Results} />
-              <Route path='/listing-detail' component={ListingDetail} />
+              <Route path='/listing-detail' render={props => (
+                <ListingDetail listing={selectedListing} {...props} />
+              )} />
               <Route path='/reviews' component={Reviews} />
               <Route path='/contact' component={Contact} />
             </div>
