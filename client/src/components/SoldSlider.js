@@ -12,9 +12,8 @@ class SoldSlider extends Component {
   }
   componentDidMount() {
     // sold listings
-    axios.get('/listings/search/sold', {
-
-    }).then((res) => {
+    axios.get('/listings/search/sold')
+    .then((res) => {
       this.setState({soldSlides: res.data.D.Results});
     }).catch(err => console.log('error', err));
   }
@@ -47,7 +46,7 @@ class SoldSlider extends Component {
         }
       ]
     }
-    
+
     const soldSlidesToDisplay = this.state.soldSlides.map((listing, index) => {
       return (<ListingSummary key={index} listing={listing} />)
     });

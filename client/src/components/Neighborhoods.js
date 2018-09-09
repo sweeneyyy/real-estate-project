@@ -31,9 +31,8 @@ class Neighborhoods extends Component {
     }
   }
   componentDidMount() {
-    axios.get('/listings/neighborhoods', {
-
-    }).then((res) => {
+    axios.get('/listings/neighborhoods')
+    .then((res) => {
       this.setState({neighborhoodListings: res.data.D.Results});
       console.log('listings', res.data.D.Results);
     }).catch((err) => {
@@ -60,7 +59,7 @@ class Neighborhoods extends Component {
             subAreaThree='Beachfront'
           />
         </div>
-        <div className='row'> 
+        <div className='row'>
           <NeighborhoodSection
             areaName='Highland Beach'
             subAreaOne='Intracoastal Condos'

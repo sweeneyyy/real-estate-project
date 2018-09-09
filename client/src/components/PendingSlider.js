@@ -12,9 +12,8 @@ class PendingSlider extends Component {
   }
   componentDidMount() {
     // pending listings
-    axios.get('/listings/search/pending', {
-
-    }).then(res => {
+    axios.get('/listings/search/pending')
+    .then(res => {
       this.setState({pendingSlides: res.data.D.Results});
     }).catch(err => console.log('error', err));
   }
