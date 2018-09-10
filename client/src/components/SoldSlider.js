@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import axios from 'axios';
 import ListingSummary from './ListingSummary.js';
@@ -13,7 +14,7 @@ class SoldSlider extends Component {
   componentDidMount() {
     // sold listings
     axios.get('/listings/search/sold')
-    .then((res) => {
+    .then(res => {
       this.setState({soldSlides: res.data.D.Results});
     }).catch(err => console.log('error', err));
   }
@@ -46,9 +47,14 @@ class SoldSlider extends Component {
         }
       ]
     }
+    const { selectListing } = this.props;
 
     const soldSlidesToDisplay = this.state.soldSlides.map((listing, index) => {
-      return (<ListingSummary key={index} listing={listing} />)
+      return (
+        <Link to={`/listing-detail/${index}`} onClick={() => selectListing(listing)}>
+          <ListingSummary key={index} listing={listing} />
+        </Link>
+      )
     });
 
     return (

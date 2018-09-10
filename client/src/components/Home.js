@@ -34,7 +34,7 @@ class Home extends Component {
         </section> */}
         <section className='home'>
           <h1>Sold</h1>
-            <SoldSlider settings={this.props.settings} />
+            <SoldSlider settings={this.props.settings} selectListing={selectListing} />
         </section>
       </div>
     );
