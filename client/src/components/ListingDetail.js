@@ -1,43 +1,51 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class ListingDetail extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     listingToDisplay: {}
-  //   }
-  // }
-
-  // componentDidMount() {
-  //   console.log(this.props)
-  //   axios.get(`/listings/search/${this.props.listing}`)
-  //   .then((res) => {
-  //     this.setState({ listingToDisplay: res.data.D.Results })
-  //     console.log('listing to display', res.data.D.Results)
-  //   })
-  // }
-
   render() {
     const { listing } = this.props;
-
+    
+    const subdivision = listing.StandardFields.SubdivisionName;
+    const formattedSub = subdivision.toLowerCase()
+      .split(' ')
+      .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+      .join(' ');
+    
     return (
-      <div>
-        <h2>Listing Detail Page</h2>
+      <div className='list-detail'>
+        <h3>
+          {listing.StandardFields.UnparsedFirstLineAddress}, 
+          {listing.StandardFields.City}, {listing.StandardFields.StateOrProvince} {listing.StandardFields.PostalCode}
+        </h3>
         <img
           className='listing-primary-photo-detail'
-          src={listing.StandardFields.Photos[0].Uri800}
+          src={listing.StandardFields.Photos[0].Uri640}
           alt={'Photo for' + listing.StandardFields.listingId}
         />
-        <h4>${new Intl.NumberFormat().format(listing.StandardFields.CurrentPrice)}</h4>
-        <ul className='space-list-summary'>
-          <li className='list-info'>{listing.StandardFields.BedsTotal} Beds | {listing.StandardFields.BathsTotal} Baths | {listing.StandardFields.BuildingAreaTotal} SQFT</li>
-          <li className='list-address'>{listing.StandardFields.UnparsedFirstLineAddress}</li>
-          <li className='list-address-2'>{listing.StandardFields.City}, {listing.StandardFields.StateOrProvince} {listing.StandardFields.PostalCode}</li>
-          <li className='list-info'>{listing.StandardFields.SubdivisionName}</li>
+        <h3>
+          Offered at: ${new Intl.NumberFormat().format(listing.StandardFields.CurrentPrice)}
+        </h3>
+        <ul>
+          <li>
+            <strong>Subdivision:</strong> {formattedSub}
+          </li>
+          <li>
+            <strong>Bedrooms:</strong> {listing.StandardFields.BedsTota}
+          </li>
+          <li>
+            <strong>Bathrooms:</strong> {listing.StandardFields.BathsTotal}
+          </li>
+          <li>
+            <strong>SqFt:</strong> {listing.StandardFields.BuildingAreaTotal} 
+          </li>
+          <li>
+            <strong>Year Built:</strong> {listing.StandardFields.YearBuilt} 
+          </li>
         </ul>
+        <p>
+          {listing.StandardFields.PublicRemarks}
+        </p>
       </div>
-    )
+    );
   }
 }
 

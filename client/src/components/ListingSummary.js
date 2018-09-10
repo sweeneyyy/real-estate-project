@@ -23,7 +23,7 @@ function ListingSummary (props) {
         <li className='list-info'>{listing.SubdivisionName}</li>
       </ul>
     </li>
-  )
+  );
 }
 
 

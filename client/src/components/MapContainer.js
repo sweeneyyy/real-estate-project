@@ -46,6 +46,6 @@ export default class MapContainer extends Component {
       <div ref='map' style={style}>
         Loading map...
       </div>
-    )
+    );
   }
 }

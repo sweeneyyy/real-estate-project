@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import PropTypes from 'prop-types';
+// import axios from 'axios';
+// import PropTypes from 'prop-types';
 
 class Results extends Component {
   render() {
@@ -8,7 +8,7 @@ class Results extends Component {
       <div>
         <h1>Listing results here</h1>
       </div>
-    )
+    );
   }
 }
 

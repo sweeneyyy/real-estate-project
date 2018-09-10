@@ -15,7 +15,7 @@ class Home extends Component {
           <h1>Your Real Estate Resource</h1>
           <p>Experienced Realtors Helping you Buy, Sell and Invest in <br /> Boca Raton, Delray Beach and Highland Beach</p>
         </header>
-        <section className='home'>
+        <section className='home agent-detail'>
           <h2>Sharon Arnett & Caron McGinley</h2>
           <p className='agent-bio'>Whether you are looking at buying, selling or making a difficult decision when facing a financial crisis with a piece of real estate, we can help.<br />
           <br />

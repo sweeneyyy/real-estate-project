@@ -4,20 +4,27 @@ function Toolbar() {
   return (
     <ul className='toolbar'>
       <li className='toolbar-contact'>
-        <i className='fas fa-phone'></i>
-        <a href='tel:561-302-3187'>561.302.3187</a>
+        <a href='tel:561-302-3187'>
+          <i className='fas fa-phone'></i>
+          561.302.3187
+        </a>
       </li>
       <li className='toolbar-contact'>
-        <i className='far fa-envelope'></i>
-        <a href='mailto:info@sharoncaron.com'>info@sharoncaron.com</a>
+        <a href='mailto:info@sharoncaron.com' target='_blank'>
+          <i className='far fa-envelope'></i>
+          info@sharoncaron.com
+        </a>
       </li>
       <li className='toolbar-social'>
-        <i className='fab fa-facebook-f'></i>
-          <a href='https://www.facebook.com/sharoncaronKW'></a>
-        <i className='fab fa-instagram'></i>
-          <a href='http://instagram.com/sharoncarongroup'></a>
-        <i className='fab fa-twitter'></i>
-          <a href='https://twitter.com/sharonarn'></a>
+        <a href='https://www.facebook.com/sharoncaronKW' target='_blank'>
+          <i className='fab fa-facebook-f'></i>
+        </a>
+        <a href='http://instagram.com/sharoncarongroup' target='_blank'>
+          <i className='fab fa-instagram'></i>
+        </a>
+        <a href='https://twitter.com/sharonarn' target='_blank'>
+          <i className='fab fa-twitter'></i>
+        </a>
       </li>
     </ul>
   );
